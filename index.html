@@ -46,30 +46,31 @@
         <table class="table">
             <thead id=tableHead>
                 <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
+                    <th scope="col-md-3">Train Name</th>
+                    <th scope="col-md-3">Destination</th>
+                    <th scope="col-md-2">Frequency (min)</th>
+                    <th scope="col-md-2">Next Arrival</th>
+                    <th scope="col-md-2">Minutes Away</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
+                    <td>""</td>
+                    <td>""</td>
+                    <td>""</td>
                 </tr>
                 <tr>
                     <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
+                    <td>""</td>
+                    <td>""</td>
+                    <td>""</td>
                 </tr>
                 <tr>
                     <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
+                    <td>""</td>
+                    <td>""</td>
+                    <td>""</td>
                 </tr>
             </tbody>
         </table>
@@ -86,19 +87,24 @@
             </div>
             <div class="form-group">
                 <label for="Destination">Destination</label>
-                <input type="password" class="form-control" id="destination" placeholder="Enter Destination">
+                <input type="text" class="form-control" id="Destination" placeholder="Destination">
             </div>
             <div class="form-group">
-                    <label for="firstTrain">First Train Time</label>
-                    <input type="text" class="form-control" id="firstTrainTime" placeholder="Enter First Train Time in HH:mm, using military time">
-                </div>
-               
+                <label for="firstTrain">First Train Time</label>
+                <input type="text" class="form-control" id="firstTrainTime"
+                    placeholder="Enter First Train Time in HH:mm, using military time">
+            </div>
+            <div class="form-group">
+                <label for="firstTrain">Frequency (Minutes)</label>
+                <input type="text" class="form-control" id="frequency" placeholder="Enter Train Frequency in Minutes">
+            </div>
+
             <button type="submit" class="btn btn-primary" id="submitBtn">Submit</button>
         </form>
 
 
-
     </div>
+    <br></br>
 
 
     <!-- JS script -->

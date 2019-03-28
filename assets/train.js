@@ -9,5 +9,36 @@
     storageBucket: "traintimes-31eb5.appspot.com",
     messagingSenderId: "1020832060874"
   };
-  
+
   firebase.initializeApp(config);
+
+
+
+var trainName = "";
+var destination = "";
+var firstTrainTime = "HH:mm";
+var frequency = "";
+var difference = 
+
+var trainDetails = {
+    trainName: trainName,
+    Destination: Destination,
+    firstTrainTime: firstTrainTime,
+    frequency: frequency
+}
+
+console.log(trainName, destination, firstTrainTime, frequency);
+
+$("#trainName").
+
+$("#submitBtn").on("click", function(event){
+    database.ref().set({
+        trainName: trainName,
+        Destination: Destination,
+        firstTrainTime: firstTrainTime,
+        frequency: frequency
+        })
+});
+
+
+
