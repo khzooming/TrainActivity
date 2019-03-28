@@ -1,0 +1,44 @@
+
+.jumbotron {
+}
+
+#mainTop {
+    color: white;
+    text-align: center;
+    background-color: #AB5C21 !important;
+}
+
+#tableHead {
+    background-color: #346EBB; 
+    color: white;
+}
+
+#submitBtn {
+    background-color: #346EBB; 
+    color: white;
+}
+
+#formHeader {
+    background-color: #346EBB; 
+    color: white;
+    display: inline-block;
+    text-align: left;
+    width: 100%;
+    margin-left: 15px;
+    margin-right: 15px;
+    height: 40px;
+}
+
+#header {
+    display: inline-block;
+}
+
+#container {
+    margin-left: 40px;
+    margin-right: 40px;
+
+}
+
+
+/* To do:  
+add thin border line around both tables */
