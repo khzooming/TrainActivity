@@ -1,44 +1,65 @@
 
 
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyCWMdYhUEPb2H6bwIE-SRfWMPli6-D0D58",
-    authDomain: "traintimes-31eb5.firebaseapp.com",
-    databaseURL: "https://traintimes-31eb5.firebaseio.com",
-    projectId: "traintimes-31eb5",
-    storageBucket: "traintimes-31eb5.appspot.com",
-    messagingSenderId: "1020832060874"
-  };
+// Initialize Firebase
+var config = {
+  apiKey: "AIzaSyCWMdYhUEPb2H6bwIE-SRfWMPli6-D0D58",
+  authDomain: "traintimes-31eb5.firebaseapp.com",
+  databaseURL: "https://traintimes-31eb5.firebaseio.com",
+  projectId: "traintimes-31eb5",
+  storageBucket: "traintimes-31eb5.appspot.com",
+  messagingSenderId: "1020832060874"
+};
 
-  firebase.initializeApp(config);
+firebase.initializeApp(config);
 
+var database = firebase.database();
 
+$("#submitBtn").on("click", function (event) {
+  event.preventDefault();
 
-var trainName = "";
-var destination = "";
-var firstTrainTime = "HH:mm";
-var frequency = "";
-var difference = 
+  var trainName = $("#trainN").val().trim();
+  var destination = $("#dest").val().trim();
+  var firstTrainTime = $("#firstTrain").val().trim();
+  var frequency = $("#freq").val().trim();
+  // var difference = 
 
-var trainDetails = {
+  console.log(trainName, destination, firstTrainTime, frequency);
+
+  var trainDetails = {
     trainName: trainName,
-    Destination: Destination,
+    destination: destination,
     firstTrainTime: firstTrainTime,
     frequency: frequency
-}
+  }
 
-console.log(trainName, destination, firstTrainTime, frequency);
-
-$("#trainName").
-
-$("#submitBtn").on("click", function(event){
-    database.ref().set({
-        trainName: trainName,
-        Destination: Destination,
-        firstTrainTime: firstTrainTime,
-        frequency: frequency
-        })
+  database.ref().set({
+    trainName: trainName,
+    destination: destination,
+    firstTrainTime: firstTrainTime,
+    frequency: frequency
+  }), function (errorObject) {
+    console.log("The read failed: " + errorObject.code);
+  }
 });
+
+var dbInfo = firebase.database().ref().child('object');
+
+// dbInfo.on("value")
+
+database.ref().on("value", function (dataSnapshot) {
+  console.log(snap.val());
+});
+
+
+
+
+
+
+
+
+
+
+
 
 
 
